@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- 因为是强制要求的框架，所以这里不需要dtd和项目了schema,只能是bean，否则报错 -->
+<beans>
+	<bean id="user" class="cn.myforever.bean.User">
+		<property ref="dog"></property>
+	</bean>
+	<bean id="dog" class="cn.myforever.bean.Dog">
+		<property id="user" ref="user"></property>
+	</bean>
+</beans>
